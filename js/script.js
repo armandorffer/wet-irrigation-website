@@ -354,3 +354,65 @@ const createFloatingCTA = () => {
 
 // Add floating CTA after page loads
 window.addEventListener('load', createFloatingCTA);
+
+// Team Member Interactive Profiles
+document.addEventListener('DOMContentLoaded', function() {
+    const teamMembers = document.querySelectorAll('.team-member');
+    
+    teamMembers.forEach(member => {
+        member.addEventListener('click', function() {
+            const avatar = this.querySelector('.team-avatar');
+            const bio = this.querySelector('.team-bio');
+            const contact = this.querySelector('.team-contact');
+            const skills = this.querySelector('.team-skills');
+            
+            // Close all other expanded profiles
+            teamMembers.forEach(otherMember => {
+                if (otherMember !== this) {
+                    const otherAvatar = otherMember.querySelector('.team-avatar');
+                    const otherBio = otherMember.querySelector('.team-bio');
+                    const otherContact = otherMember.querySelector('.team-contact');
+                    const otherSkills = otherMember.querySelector('.team-skills');
+                    
+                    otherAvatar.classList.remove('expanded');
+                    otherBio.classList.remove('visible');
+                    otherContact.classList.remove('visible');
+                    otherSkills.classList.remove('visible');
+                }
+            });
+            
+            // Toggle current profile
+            avatar.classList.toggle('expanded');
+            bio.classList.toggle('visible');
+            contact.classList.toggle('visible');
+            skills.classList.toggle('visible');
+            
+            // Smooth scroll to expanded profile
+            if (avatar.classList.contains('expanded')) {
+                setTimeout(() => {
+                    this.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                }, 300);
+            }
+        });
+    });
+    
+    // Close expanded profile when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.team-member')) {
+            teamMembers.forEach(member => {
+                const avatar = member.querySelector('.team-avatar');
+                const bio = member.querySelector('.team-bio');
+                const contact = member.querySelector('.team-contact');
+                const skills = member.querySelector('.team-skills');
+                
+                avatar.classList.remove('expanded');
+                bio.classList.remove('visible');
+                contact.classList.remove('visible');
+                skills.classList.remove('visible');
+            });
+        }
+    });
+});

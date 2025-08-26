@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# Sitemap location (replace 'yourusername' with your actual GitHub username)
+# Sitemap location
 Sitemap: https://armandorffer.github.io/wet-irrigation-website/sitemap.xml
 
 # Disallow certain file types (optional)
@@ -11,4 +11,3 @@ Disallow: /docs/
 
 # Allow important pages
 Allow: /brochures/
-
