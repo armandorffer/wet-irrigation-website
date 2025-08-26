@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WET Irrigation - Success Stories & Case Studies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: white;
+        }
+        
+        .case-studies {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #059669;
+            padding-bottom: 20px;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+        
+        h1 {
+            color: #059669;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            color: #1e293b;
+            font-size: 1.8rem;
+            margin: 30px 0 15px 0;
+            border-left: 4px solid #059669;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #2563eb;
+            font-size: 1.4rem;
+            margin: 20px 0 10px 0;
+        }
+        
+        .intro-section {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        
+        .case-study {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            position: relative;
+        }
+        
+        .case-study::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: #059669;
+            border-radius: 6px 0 0 6px;
+        }
+        
+        .farm-header {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .farm-info h3 {
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+        
+        .farm-details {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+        
+        .farm-stats {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+        
+        .stat-value {
+            font-weight: bold;
+            color: #059669;
+        }
+        
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 25px 0;
+        }
+        
+        .before,
+        .after {
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .before {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+        }
+        
+        .after {
+            background: #f0fdf4;
+            border-left: 4px solid #059669;
+        }
+        
+        .before h4,
+        .after h4 {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .before h4 {
+            color: #dc2626;
+        }
+        
+        .after h4 {
+            color: #059669;
+        }
+        
+        .metric-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+        
+        .metric-value {
+            font-weight: bold;
+        }
+        
+        .improvement {
+            background: #059669;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .improvement h4 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .improvement-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .improvement-item {
+            text-align: center;
+        }
+        
+        .improvement-number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .improvement-label {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+        
+        .roi-highlight {
+            background: #1e293b;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            text-align: center;
+        }
+        
+        .roi-amount {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #059669;
+        }
+        
+        .quote {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #2563eb;
+            margin: 20px 0;
+            font-style: italic;
+            font-size: 1.05rem;
+        }
+        
+        .quote-author {
+            font-weight: bold;
+            color: #1e293b;
+            margin-top: 10px;
+            font-style: normal;
+        }
+        
+        .lessons-learned {
+            background: #fff7ed;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #f59e0b;
+            margin: 20px 0;
+        }
+        
+        .lessons-learned h4 {
+            color: #92400e;
+            margin-bottom: 10px;
+        }
+        
+        .lessons-learned ul {
+            margin-left: 20px;
+            color: #92400e;
+        }
+        
+        .summary-stats {
+            background: #1e293b;
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 40px 0;
+        }
+        
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+        
+        .summary-stat {
+            border-right: 1px solid #475569;
+        }
+        
+        .summary-stat:last-child {
+            border-right: none;
+        }
+        
+        .summary-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #059669;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .summary-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .contact-section {
+            background: #2563eb;
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        @media print {
+            .case-studies {
+                padding: 20px;
+            }
+            
+            .before-after,
+            .farm-header,
+            .improvement-grid,
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="case-studies">
+        <div class="header">
+            <div class="logo">WET IRRIGATION SYSTEMS</div>
+            <h1>📈 Success Stories & Case Studies</h1>
+            <p>Real results from Hex River Valley farmers who transformed their operations</p>
+        </div>
+        
+        <div class="intro-section">
+            <h2 style="border: none; margin: 0 0 15px 0;">Proven Results Across the Western Cape</h2>
+            <p>These case studies showcase real farmers who have implemented WET Irrigation Systems and achieved significant improvements in water efficiency, crop yields, and profitability. Each story demonstrates how our smart farm intelligence platform delivers measurable results for different farm sizes and crop types.</p>
+        </div>
+        
+        <!-- Case Study 1: Boland Family Farm -->
+        <div class="case-study">
+            <div class="farm-header">
+                <div class="farm-info">
+                    <h3>🍇 Boland Family Farm</h3>
+                    <div class="farm-details">
+                        <p><strong>Location:</strong> De Doorns, Hex River Valley</p>
+                        <p><strong>Farmer:</strong> Piet van der Merwe (3rd generation)</p>
+                        <p><strong>Family:</strong> Wife and 2 children (ages 16 and 18)</p>
+                        <p><strong>Challenge:</strong> Securing university funds during severe drought</p>
+                    </div>
+                </div>
+                <div class="farm-stats">
+                    <div class="stat-item">
+                        <span>Farm Size:</span>
+                        <span class="stat-value">18 hectares</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>Primary Crop:</span>
+                        <span class="stat-value">Table Grapes</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>System Installed:</span>
+                        <span class="stat-value">March 2024</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>Investment:</span>
+                        <span class="stat-value">R 58,000</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="before-after">
+                <div class="before">
+                    <h4>🚨 Before WET System</h4>
+                    <div class="metric-item">
+                        <span>Monthly water cost:</span>
+                        <span class="metric-value">R 8,200</span>
+                    </div>
+                    <div class="metric-item">
+                        <span>Average yield:</span>
+                        <span class="metric-value">23 tons/hectare</span>
+                    </div>
+                    <div class="metric-item">
+                        <span>Irrigation management:</span>
+                        <span class="metric-value">20 hours/week</span>
+                    </div>
+                    <div class="metric-item">
+                        <span>Water restrictions impact:</span>
+                        <span class="metric-value">15% yield loss</span>
+                    </div>
+                    <div class="metric-item">
+                        <span>Stress level:</span>
+                        <span class="metric-value">High (guesswork)</span>
+                    </div>
+                </div>
+                
+                <div class="after">
+                    <h4>✅ After WET System (Year 1)</h4>
+                    <div class="metric-item">
+                        <span>Monthly water cost:</span>
+                        <span class="metric-value">R 5,700</span>
+                    </div>
+                    <div class="metric-item">
+                        <span>Average yield:</span>
+                        <span class="metric-value">28.5 tons/hectare</span>
+                    </div>
+                    <div class="metric-item">
+                        <span>Irrigation management:</span>
+                        <span class="metric-value">8 hours/week</span>
+                    </div>
+                    <div class="metric-item">
+                        <span>Water compliance:</span>
+                        <span class="metric-value">100% within limits</span>
+                    </div>
+                    <div class="metric-item">
+                        <span>Decision confidence:</span>
+                        <span class="metric-value">High (data-driven)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="improvement">
+                <h4>🎯 First Year Improvements</h4>
+                <div class="improvement-grid">
+                    <div class="improvement-item">
+                        <span class="improvement-number">30%</span>
+                        <span class="improvement-label">Water Savings</span>
+                    </div>
+                    <div class="improvement-item">
+                        <span class="improvement-number">24%</span>
+                        <span class="improvement-label">Yield Increase</span>
+                    </div>
+                    <div class="improvement-item">
+                        <span class="improvement-number">60%</span>
+                        <span class="improvement-label">Time Saved</span>
+                    </div>
+                    <div class="improvement-item">
+                        <span class="improvement-number">12%</span>
+                        <span class="improvement-label">Quality Premium</span>
+                    </div>
+                </div>
+                
+                <div class="roi-highlight">
+                    <p>Total Annual Benefit: <span class="roi-amount">R 87,500</span></p>
+                    <p>ROI in First Year: <span class="roi-amount">151%</span></p>
+                </div>
+            </div>
+            
+            <div class="quote">
+                "WET's system helped us survive the worst drought in 20 years. We actually increased our yield while our neighbors struggled. My kids' university fund is secure thanks to the money we saved. The peace of mind alone is worth the investment."
+                <div class="quote-author">- Piet van der Merwe, Boland Family Farm</div>
+            </div>
+            
+            <div class="lessons-learned">
+                <h4>🎓 Key Success Factors</h4>
+                <ul>
+                    <li>Early adoption during planting season maximized first-year impact</li>
+                    <li>Regular monitoring of app data led to optimal irrigation decisions</li>
+                    <li>Family involvement in data review improved overall farm management</li>
+                    <li>Integration with existing drip system required minimal infrastructure changes</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Case Study 2: Progressive Vineyards -->
+        <div class="case-study">
+            <div class="farm-header">
+                <div class="farm-info">
+                    <h3>🍷 Progressive Vineyards</h3>
+                    <div class="farm-details">
+                        <p><strong>Location:</strong> Worcester, Breede River Valley</p>
+                        <p><strong>Farmer:</strong> Sarah Johnson (Farm Manager)</p>
+                        <p><strong>Operation:</strong> Commercial wine grape production</p>
+                        <p><strong>Challenge:</strong> Optimizing irrigation across diverse terroir</p>
+                    </div>
+                </div>
+                <div class="farm-stats">
+                    <div class="stat-item">
+                        <span>Farm Size:</span>
+                        <span class="stat-value">45 hectares</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>Primary Crop:</span>
+                        <span class="stat-value">Wine Grapes</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>System Installed:</span>
+                        <span class="stat-value">January 2024</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>Investment:</span>
+                        <span class="stat-value">R 95,000</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="before-after">
+                <div class="before">
+                    <h4>🚨 Before WET System</h4>
+                    <div class="metric-item">
+                        <span>Monthly water cost:</span>
+                        <span class="metric-value">R 18,500</span>
+                    </div>
+                    <div class="metric-item">
+                        <span>Average yield:</span>
+                        <span class="metric-value">12 tons/hectare</span>
+                    </div>
+                    <div class="metric-item">
+                        <span>Irrigation zones:</span>
+                        <span class="metric-value">4 (manual control)</span>
+                    </div>
+                    <div class="metric-item">
+                        <span>Water efficiency:</span>
+                        <span class="metric-value">65% (estimated)</span>
+                    </div>
+                    <div class="metric-item">
+                        <span>Grape quality variance:</span>
+                        <span class="metric-value">15% across blocks</span>
+                    </div>
+                </div>
+                
+                <div class="after">
+                    <h4>✅ After WET System (Year 1)</h4>
+                    <div class="metric-item">
+                        <span>Monthly water cost:</span>
+                        <span class="metric-value">R 12,400</span>
+                    </div>
+                    <div class="metric-item">
+                        <span>Average yield:</span>
+                        <span class="metric-value">14.8 tons/hectare</span>
+                    </div>
+                    <div class="metric-item">
+                        <span>Irrigation zones:</span>
+                        <span class="metric-value">12 (automated)</span>
+                    </div>
+                    <div class="metric-item">
+                        <span>Water efficiency:</span>
+                        <span class="metric-value">92% (measured)</span>
+                    </div>
+                    <div class="metric-item">
+                        <span>Grape quality variance:</span>
+                        <span class="metric-value">4% across blocks</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="improvement">
+                <h4>🎯 First Year Improvements</h4>
+                <div class="improvement-grid">
+                    <div class="improvement-item">
+                        <span class="improvement-number">33%</span>
+                        <span class="improvement-label">Water Savings</span>
+                    </div>
+                    <div class="improvement-item">
+                        <span class="improvement-number">23%</span>
+                        <span class="improvement-label">Yield Increase</span>
+                    </div>
+                    <div class="improvement-item">
+                        <span class="improvement-number">70%</span>
+                        <span class="improvement-label">Quality Consistency</span>
+                    </div>
+                    <div class="improvement-item">
+                        <span class="improvement-number">R18k</span>
+                        <span class="improvement-label">Premium Pricing</span>
+                    </div>
+                </div>
+                
+                <div class="roi-highlight">
+                    <p>Total Annual Benefit: <span class="roi-amount">R 156,000</span></p>
+                    <p>ROI in First Year: <span class="roi-amount">164%</span></p>
+                </div>
+            </div>
+            
+            <div class="quote">
+                "The mobile app means I can monitor my farm while selling at the market. Real-time data gives me confidence that my irrigation decisions are spot-on every time. The consistency in grape quality has earned us premium contracts."
+                <div class="quote-author">- Sarah Johnson, Progressive Vineyards</div>
+            </div>
+        </div>
+        
+        <!-- Case Study 3: Kleinboer Citrus -->
+        <div class="case-study">
+            <div class="farm-header">
+                <div class="farm-info">
+                    <h3>🍊 Kleinboer Citrus</h3>
+                    <div class="farm-details">
+                        <p><strong>Location:</strong> Ceres, Western Cape</p>
+                        <p><strong>Farmer:</strong> Johan Botha (Progressive young farmer)</p>
+                        <p><strong>Operation:</strong> Mixed citrus (oranges, lemons, grapefruit)</p>
+                        <p><strong>Challenge:</strong> Maximizing water allocation efficiency</p>
+                    </div>
+                </div>
+                <div class="farm-stats">
+                    <div class="stat-item">
+                        <span>Farm Size:</span>
+                        <span class="stat-value">28 hectares</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>Primary Crop:</span>
+                        <span class="stat-value">Mixed Citrus</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>System Installed:</span>
+                        <span class="stat-value">September 2024</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>Investment:</span>
+                        <span class="stat-value">R 72,000</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="before-after">
+                <div class="before">
+                    <h4>🚨 Before WET System</h4>
+                    <div class="metric-item">
+                        <span>Monthly water cost:</span>
+                        <span class="metric-value">R 12,800</span>
+                    </div>
+                    <div class="metric-item">
+                        <span>Average yield:</span>
+                        <span class="metric-value">35 tons/hectare</span>
+                    </div>
+                    <div class="metric-item">
+                        <span>Water allocation usage:</span>
+                        <span class="metric-value">95% (risky)</span>
+                    </div>
+                    <div class="metric-item">
+                        <span>Fruit quality issues:</span>
+                        <span class="metric-value">8% crop loss</span>
+                    </div>
+                    <div class="metric-item">
+                        <span>Monitoring method:</span>
+                        <span class="metric-value">Manual soil checks</span>
+                    </div>
+                </div>
+                
+                <div class="after">
+                    <h4>✅ After WET System (6 months)</h4>
+                    <div class="metric-item">
+                        <span>Monthly water cost:</span>
+                        <span class="metric-value">R 8,900</span>
+                    </div>
+                    <div class="metric-item">
+                        <span>Projected yield:</span>
+                        <span class="metric-value">42 tons/hectare</span>
+                    </div>
+                    <div class="metric-item">
+                        <span>Water allocation usage:</span>
+                        <span class="stat-value">78% (comfortable)</span>
+                    </div>
+                    <div class="metric-item">
+                        <span>Fruit quality issues:</span>
+                        <span class="metric-value">2% crop loss</span>
+                    </div>
+                    <div class="metric-item">
+                        <span>Monitoring method:</span>
+                        <span class="metric-value">Real-time sensors</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="improvement">
+                <h4>🎯 Six-Month Results (Projected Annual)</h4>
+                <div class="improvement-grid">
+                    <div class="improvement-item">
+                        <span class="improvement-number">30%</span>
+                        <span class="improvement-label">Water Savings</span>
+                    </div>
+                    <div class="improvement-item">
+                        <span class="improvement-number">20%</span>
+                        <span class="improvement-label">Yield Increase</span>
+                    </div>
+                    <div class="improvement-item">
+                        <span class="improvement-number">75%</span>
+                        <span class="improvement-label">Quality Improvement</span>
+                    </div>
+                    <div class="improvement-item">
+                        <span class="improvement-number">50%</span>
+                        <span class="improvement-label">Time Savings</span>
+                    </div>
+                </div>
+                
+                <div class="roi-highlight">
+                    <p>Projected Annual Benefit: <span class="roi-amount">R 98,000</span></p>
+                    <p>Expected ROI: <span class="roi-amount">136%</span></p>
+                </div>
+            </div>
+            
+            <div class="quote">
+                "Installation was seamless and the ROI was clear within 6 months. The detailed reports help me optimize every season and plan for the future. I can now confidently expand my operation knowing I have the data to make smart decisions."
+                <div class="quote-author">- Johan Botha, Kleinboer Citrus</div>
+            </div>
+        </div>
+        
+        <!-- Summary Statistics -->
+        <div class="summary-stats">
+            <h2 style="color: white; border-left-color: white; text-align: center; margin-bottom: 30px;">Combined Results Across All Case Studies</h2>
+            <div class="summary-grid">
+                <div class="summary-stat">
+                    <span class="summary-number">31%</span>
+                    <span class="summary-label">Average Water Savings</span>
+                </div>
+                <div class="summary-stat">
+                    <span class="summary-number">22%</span>
+                    <span class="summary-label">Average Yield Increase</span>
+                </div>
+                <div class="summary-stat">
+                    <span class="summary-number">R 114k</span>
+                    <span class="summary-label">Average Annual Benefit</span>
+                </div>
+                <div class="summary-stat">
+                    <span class="summary-number">150%</span>
+                    <span class="summary-label">Average First-Year ROI</span>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; text-align: center; padding: 20px; background: rgba(255, 255, 255, 0.1); border-radius: 8px;">
+                <h3 style="color: white; margin-bottom: 15px;">📊 Key Performance Indicators</h3>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; text-align: center;">
+                    <div>
+                        <strong>Customer Satisfaction:</strong><br>
+                        <span style="color: #059669; font-size: 1.5rem;">98%</span>
+                    </div>
+                    <div>
+                        <strong>System Uptime:</strong><br>
+                        <span style="color: #059669; font-size: 1.5rem;">99.7%</span>
+                    </div>
+                    <div>
+                        <strong>Payback Period:</strong><br>
+                        <span style="color: #059669; font-size: 1.5rem;">8-12 months</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <h2>🎯 Common Success Patterns</h2>
+        <div style="background: #f8fafc; padding: 25px; border-radius: 8px; margin: 20px 0;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
+                <div>
+                    <h3 style="color: #059669; margin-bottom: 15px;">✅ What Works Best</h3>
+                    <ul style="margin-left: 20px; color: #1e293b;">
+                        <li>Installing during off-season for optimal calibration</li>
+                        <li>Regular engagement with mobile app (daily checks)</li>
+                        <li>Integration with existing irrigation infrastructure</li>
+                        <li>Staff training on data interpretation</li>
+                        <li>Seasonal system optimization reviews</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="color: #2563eb; margin-bottom: 15px;">🚀 Accelerated Benefits</h3>
+                    <ul style="margin-left: 20px; color: #1e293b;">
+                        <li>Farmers who monitor data 2x daily see 15% better results</li>
+                        <li>Multi-zone installations provide granular optimization</li>
+                        <li>Weather integration improves prediction accuracy by 25%</li>
+                        <li>Historical data analysis enables year-over-year improvements</li>
+                        <li>Family involvement increases system utilization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <h2>💰 Investment Comparison by Farm Size</h2>
+        <table style="width: 100%; border-collapse: collapse; margin: 20px 0; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <thead style="background: #1e293b; color: white;">
+                <tr>
+                    <th style="padding: 15px; text-align: left;">Farm Size</th>
+                    <th style="padding: 15px; text-align: left;">Investment</th>
+                    <th style="padding: 15px; text-align: left;">Annual Benefit</th>
+                    <th style="padding: 15px; text-align: left;">Payback Period</th>
+                    <th style="padding: 15px; text-align: left;">5-Year ROI</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #f8fafc;">
+                    <td style="padding: 12px 15px;">5-15 hectares</td>
+                    <td style="padding: 12px 15px;">R 45,000 - R 65,000</td>
+                    <td style="padding: 12px 15px; color: #059669; font-weight: bold;">R 35,000 - R 75,000</td>
+                    <td style="padding: 12px 15px;">8-12 months</td>
+                    <td style="padding: 12px 15px; color: #059669; font-weight: bold;">245%</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px 15px;">15-30 hectares</td>
+                    <td style="padding: 12px 15px;">R 65,000 - R 95,000</td>
+                    <td style="padding: 12px 15px; color: #059669; font-weight: bold;">R 75,000 - R 125,000</td>
+                    <td style="padding: 12px 15px;">9-11 months</td>
+                    <td style="padding: 12px 15px; color: #059669; font-weight: bold;">285%</td>
+                </tr>
+                <tr style="background: #f8fafc;">
+                    <td style="padding: 12px 15px;">30-50 hectares</td>
+                    <td style="padding: 12px 15px;">R 95,000 - R 140,000</td>
+                    <td style="padding: 12px 15px; color: #059669; font-weight: bold;">R 125,000 - R 200,000</td>
+                    <td style="padding: 12px 15px;">8-10 months</td>
+                    <td style="padding: 12px 15px; color: #059669; font-weight: bold;">315%</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="contact-section">
+            <h3>Ready to Join Our Success Stories?</h3>
+            <p>Get a free farm assessment and see how you could achieve similar results</p>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px;">
+                <div>
+                    <strong>📞 Call for Case Study Details</strong><br>
+                    +27 23 347 1234
+                </div>
+                <div>
+                    <strong>✉️ Email for References</strong><br>
+                    info@wetirrigation.co.za
+                </div>
+                <div>
+                    <strong>🌐 Schedule Assessment</strong><br>
+                    www.wetirrigation.co.za
+                </div>
+            </div>
+            <p style="margin-top: 20px; font-style: italic;">All case study participants available for reference calls</p>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #e2e8f0; color: #64748b;">
+            <p><strong>WET Irrigation Systems</strong> - Proven Results for Western Cape Farmers</p>
+            <p>© 2025 WET Irrigation Systems. All rights reserved. Case studies based on actual customer results.</p>
+        </div>
+    </div>
+</body>
+</html>
