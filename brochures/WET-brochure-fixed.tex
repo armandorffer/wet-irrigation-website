@@ -1,0 +1,349 @@
+\documentclass[a4paper,landscape]{article}
+\usepackage[margin=0.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{qrcode}
+\usepackage{array}
+
+% Define company colors
+\definecolor{wetblue}{RGB}{0,102,204}
+\definecolor{wetgreen}{RGB}{34,139,34}
+\definecolor{wetlightblue}{RGB}{135,206,235}
+\definecolor{wetlightgreen}{RGB}{144,238,144}
+
+% Remove page numbers and headers
+\pagestyle{empty}
+
+\begin{document}
+
+% Create the tri-fold layout using a simple table
+\begin{tabular}{|p{8.5cm}|p{8.5cm}|p{8.5cm}|}
+\hline
+
+% LEFT PANEL - Front Cover
+\begin{minipage}[t]{8cm}
+\vspace{0.5cm}
+\begin{center}
+
+% Your Company Logo
+\includegraphics[width=4cm]{wet-logo.png}
+
+\vspace{1cm}
+
+{\Huge \textcolor{wetblue}{\textbf{WET}}}\\[0.3cm]
+{\Large \textcolor{wetgreen}{\textbf{Smart Irrigation}}}\\[0.5cm]
+{\large \textcolor{wetblue}{Intelligent Water Management}}
+
+\vspace{2cm}
+
+\colorbox{wetlightgreen}{\parbox{6cm}{\centering\textcolor{wetblue}{\textbf{Transform Your Farm}}}}
+
+\vspace{1cm}
+
+{\large \textcolor{wetgreen}{\textbf{30\% Water Savings}}}\\[0.2cm]
+{\large \textcolor{wetblue}{\textbf{25\% Yield Increase}}}
+
+\vspace{1.5cm}
+
+\textcolor{wetgreen}{\rule{6cm}{2pt}}\\
+\textcolor{wetblue}{\rule{6cm}{2pt}}
+
+\vspace{0.5cm}
+
+{\small \textcolor{wetblue}{Western Cape's Smart}}\\
+{\small \textcolor{wetgreen}{Irrigation Specialists}}
+
+\end{center}
+\end{minipage}
+
+&
+
+% MIDDLE PANEL - Inside Left
+\begin{minipage}[t]{8cm}
+\vspace{0.5cm}
+
+{\Large \textcolor{wetblue}{\textbf{Why Choose WET Smart Irrigation?}}}
+
+\vspace{0.5cm}
+
+{\large \textcolor{wetgreen}{\textbf{Precision Monitoring}}}\\
+\small
+Real-time soil moisture, weather data, and crop health monitoring for optimal irrigation decisions.
+
+\vspace{0.4cm}
+
+{\large \textcolor{wetgreen}{\textbf{Water Conservation}}}\\
+\small
+Advanced algorithms reduce water usage by up to 30\% while maintaining crop quality.
+
+\vspace{0.4cm}
+
+{\large \textcolor{wetgreen}{\textbf{Data Intelligence}}}\\
+\small
+Transform farm data into profitable decisions with our comprehensive analytics platform.
+
+\vspace{0.4cm}
+
+{\large \textcolor{wetgreen}{\textbf{Targeted Application}}}\\
+\small
+Zone-specific irrigation based on individual crop needs and soil conditions.
+
+\vspace{0.4cm}
+
+{\large \textcolor{wetgreen}{\textbf{Mobile Access}}}\\
+\small
+Monitor and control your irrigation system from anywhere with our mobile app.
+
+\vspace{0.4cm}
+
+{\large \textcolor{wetgreen}{\textbf{Easy Installation}}}\\
+\small
+Minimal disruption to your operations with our streamlined setup process.
+
+\vspace{1cm}
+
+\colorbox{wetlightblue}{\parbox{7cm}{
+\centering
+\textcolor{wetblue}{\textbf{Proven Results}}\\[0.2cm]
+\textcolor{wetgreen}{Hex River Valley Farmers}\\
+\textcolor{wetblue}{Report Average Savings of}\\
+\textcolor{wetgreen}{\textbf{R 50,000+ per season}}
+}}
+
+\end{minipage}
+
+&
+
+% RIGHT PANEL - Inside Right
+\begin{minipage}[t]{8cm}
+\vspace{0.5cm}
+
+{\Large \textcolor{wetblue}{\textbf{Our Smart Solutions}}}
+
+\vspace{0.5cm}
+
+{\large \textcolor{wetgreen}{\textbf{Sensor Network}}}\\
+\small
+$\bullet$ Soil moisture sensors\\
+$\bullet$ Weather monitoring stations\\
+$\bullet$ Crop health cameras\\
+$\bullet$ Flow rate meters
+
+\vspace{0.4cm}
+
+{\large \textcolor{wetgreen}{\textbf{Control Systems}}}\\
+\small
+$\bullet$ Automated valve control\\
+$\bullet$ Pump management\\
+$\bullet$ Fertilizer injection\\
+$\bullet$ Alert notifications
+
+\vspace{0.4cm}
+
+{\large \textcolor{wetgreen}{\textbf{Analytics Platform}}}\\
+\small
+$\bullet$ Water usage reports\\
+$\bullet$ Crop yield predictions\\
+$\bullet$ Cost analysis\\
+$\bullet$ ROI calculations
+
+\vspace{0.5cm}
+
+\colorbox{wetlightgreen}{\parbox{7cm}{
+\centering
+\textcolor{wetblue}{\textbf{Perfect for:}}\\[0.2cm]
+\textcolor{wetgreen}{$\bullet$ Vineyards}\\
+\textcolor{wetgreen}{$\bullet$ Orchards}\\
+\textcolor{wetgreen}{$\bullet$ Row Crops}\\
+\textcolor{wetgreen}{$\bullet$ Greenhouse Operations}
+}}
+
+\vspace{0.5cm}
+
+{\Large \textcolor{wetblue}{\textbf{Installation Process}}}
+
+\vspace{0.3cm}
+
+\small
+\textcolor{wetblue}{\textbf{1. Farm Assessment}} - Free consultation\\
+\textcolor{wetgreen}{\textbf{2. Custom Design}} - Tailored solution\\
+\textcolor{wetblue}{\textbf{3. Installation}} - Professional setup\\
+\textcolor{wetgreen}{\textbf{4. Training}} - System operation\\
+\textcolor{wetblue}{\textbf{5. Support}} - Ongoing assistance
+
+\end{minipage}
+
+\\
+\hline
+
+% BOTTOM LEFT - Back Left
+\begin{minipage}[t]{8cm}
+\vspace{0.5cm}
+
+{\Large \textcolor{wetblue}{\textbf{Customer Success Stories}}}
+
+\vspace{0.5cm}
+
+{\large \textcolor{wetgreen}{\textbf{Piet van der Merwe}}}\\
+\textcolor{wetgreen}{\textit{Vineyard Owner, Hex River Valley}}
+
+\small
+"WET's smart irrigation system transformed my vineyard operations. Water savings of 35\% in the first season, and grape quality has never been better."
+
+\vspace{0.4cm}
+
+{\large \textcolor{wetgreen}{\textbf{Sarah Johnson}}}\\
+\textcolor{wetgreen}{\textit{Farm Manager, Robertson}}
+
+\small
+"The data insights are incredible. We now make irrigation decisions based on real information, not guesswork. ROI was achieved in 18 months."
+
+\vspace{0.4cm}
+
+{\large \textcolor{wetgreen}{\textbf{Johan Botha}}}\\
+\textcolor{wetgreen}{\textit{Orchard Owner, Stellenbosch}}
+
+\small
+"Installation was seamless and the mobile app makes monitoring so easy. Our water bills dropped significantly while yields increased."
+
+\vspace{1cm}
+
+\colorbox{wetblue}{\parbox{7cm}{
+\centering
+\textcolor{white}{\textbf{Awards \& Recognition}}\\[0.2cm]
+\textcolor{wetlightblue}{$\bullet$ AgriTech Innovation Award 2024}\\
+\textcolor{white}{$\bullet$ Water Conservation Excellence}\\
+\textcolor{wetlightblue}{$\bullet$ Sustainable Farming Partner}
+}}
+
+\end{minipage}
+
+&
+
+% BOTTOM MIDDLE - Back Center
+\begin{minipage}[t]{8cm}
+\vspace{0.5cm}
+
+{\Large \textcolor{wetblue}{\textbf{Technical Specifications}}}
+
+\vspace{0.5cm}
+
+{\large \textcolor{wetgreen}{\textbf{Connectivity}}}\\
+\small
+$\bullet$ 4G/5G wireless communication\\
+$\bullet$ LoRaWAN sensor network\\
+$\bullet$ WiFi backup connectivity\\
+$\bullet$ Cloud-based data storage
+
+\vspace{0.4cm}
+
+{\large \textcolor{wetgreen}{\textbf{Monitoring Range}}}\\
+\small
+$\bullet$ Up to 500 hectares per system\\
+$\bullet$ Sensor range: 2km radius\\
+$\bullet$ Real-time data updates\\
+$\bullet$ 99.9\% system uptime
+
+\vspace{0.4cm}
+
+{\large \textcolor{wetgreen}{\textbf{Power Management}}}\\
+\small
+$\bullet$ Solar-powered sensors\\
+$\bullet$ Battery backup systems\\
+$\bullet$ Low-power consumption\\
+$\bullet$ 5+ year sensor lifespan
+
+\vspace{0.4cm}
+
+{\large \textcolor{wetgreen}{\textbf{Software Features}}}\\
+\small
+$\bullet$ Mobile app (iOS/Android)\\
+$\bullet$ Web dashboard access\\
+$\bullet$ Custom reporting tools\\
+$\bullet$ API integration available
+
+\vspace{0.5cm}
+
+\colorbox{wetlightgreen}{\parbox{7cm}{
+\centering
+\textcolor{wetblue}{\textbf{System Requirements}}\\[0.2cm]
+\textcolor{wetgreen}{$\bullet$ 230V power supply}\\
+\textcolor{wetblue}{$\bullet$ Internet connectivity}\\
+\textcolor{wetgreen}{$\bullet$ Existing irrigation infrastructure}\\
+\textcolor{wetblue}{$\bullet$ Smartphone/tablet for app}
+}}
+
+\end{minipage}
+
+&
+
+% BOTTOM RIGHT - Back Cover/Contact
+\begin{minipage}[t]{8cm}
+\vspace{0.5cm}
+
+\begin{center}
+
+{\Large \textcolor{wetblue}{\textbf{Get Started Today}}}
+
+\vspace{0.5cm}
+
+{\large \textcolor{wetgreen}{\textbf{Contact Information}}}
+
+\vspace{0.3cm}
+
+\textcolor{wetblue}{\textbf{Email:}}\\
+\small info@wet-irrigation.co.za
+
+\vspace{0.3cm}
+
+\textcolor{wetgreen}{\textbf{Phone:}}\\
+\small +27 23 347 1234
+
+\vspace{0.3cm}
+
+\textcolor{wetblue}{\textbf{Address:}}\\
+\small Worcester, Western Cape\\
+South Africa
+
+\vspace{0.5cm}
+
+{\large \textcolor{wetgreen}{\textbf{Visit Our Website}}}
+
+\vspace{0.3cm}
+
+% QR Code for website
+\qrcode[height=3cm]{https://armandorffer.github.io/wet-irrigation-website/}
+
+\vspace{0.3cm}
+
+\small \textcolor{wetblue}{armandorffer.github.io/wet-irrigation-website}
+
+\vspace{0.5cm}
+
+\colorbox{wetgreen}{\parbox{6cm}{\centering\textcolor{white}{\textbf{FREE Farm Assessment}}}}
+
+\vspace{0.3cm}
+
+\small \textcolor{wetblue}{Schedule your consultation today}
+
+\vspace{0.5cm}
+
+\textcolor{wetgreen}{\textbf{Follow Us:}}\\
+\small @WETIrrigation
+
+\vspace{1cm}
+
+% Company logo at bottom
+\includegraphics[width=3cm]{wet-logo.png}
+
+\end{center}
+
+\end{minipage}
+
+\\
+\hline
+
+\end{tabular}
+
+\end{document}
