@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <!-- Background -->
+  <rect width="300" height="300" fill="#fef3c7"/>
+  
+  <!-- Farm background -->
+  <rect y="200" width="300" height="100" fill="#eab308" opacity="0.4"/>
+  
+  <!-- Person silhouette -->
+  <circle cx="150" cy="120" r="40" fill="#64748b"/>
+  <rect x="120" y="160" width="60" height="80" fill="#64748b" rx="10"/>
+  
+  <!-- Hair/ponytail style -->
+  <circle cx="150" cy="90" r="35" fill="#92400e"/>
+  <ellipse cx="185" cy="95" rx="8" ry="20" fill="#92400e"/>
+  
+  <!-- Crop rows in background -->
+  <rect x="20" y="220" width="260" height="6" fill="#ca8a04" rx="3"/>
+  <rect x="20" y="240" width="260" height="6" fill="#ca8a04" rx="3"/>
+  <rect x="20" y="260" width="260" height="6" fill="#ca8a04" rx="3"/>
+  
+  <!-- Technology indicators -->
+  <circle cx="80" cy="230" r="3" fill="#dc2626"/>
+  <circle cx="150" cy="250" r="3" fill="#dc2626"/>
+  <circle cx="220" cy="270" r="3" fill="#dc2626"/>
+  
+  <!-- Name placeholder -->
+  <rect x="50" y="270" width="200" height="20" fill="rgba(255,255,255,0.9)" rx="10"/>
+  <text x="150" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#64748b">Farm Manager</text>
+</svg>

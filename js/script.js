@@ -358,61 +358,77 @@ window.addEventListener('load', createFloatingCTA);
 // Team Member Interactive Profiles
 document.addEventListener('DOMContentLoaded', function() {
     const teamMembers = document.querySelectorAll('.team-member');
+    const overlay = document.querySelector('.team-overlay');
+    const allCards = document.querySelectorAll('.team-info-card');
     
+    // Show info card on hover
     teamMembers.forEach(member => {
-        member.addEventListener('click', function() {
-            const avatar = this.querySelector('.team-avatar');
-            const bio = this.querySelector('.team-bio');
-            const contact = this.querySelector('.team-contact');
-            const skills = this.querySelector('.team-skills');
+        member.addEventListener('mouseenter', function() {
+            const memberName = this.dataset.member;
+            const card = document.getElementById(memberName + '-card');
             
-            // Close all other expanded profiles
-            teamMembers.forEach(otherMember => {
-                if (otherMember !== this) {
-                    const otherAvatar = otherMember.querySelector('.team-avatar');
-                    const otherBio = otherMember.querySelector('.team-bio');
-                    const otherContact = otherMember.querySelector('.team-contact');
-                    const otherSkills = otherMember.querySelector('.team-skills');
-                    
-                    otherAvatar.classList.remove('expanded');
-                    otherBio.classList.remove('visible');
-                    otherContact.classList.remove('visible');
-                    otherSkills.classList.remove('visible');
-                }
+            // Hide all other cards
+            allCards.forEach(c => {
+                c.classList.remove('visible');
             });
             
-            // Toggle current profile
-            avatar.classList.toggle('expanded');
-            bio.classList.toggle('visible');
-            contact.classList.toggle('visible');
-            skills.classList.toggle('visible');
-            
-            // Smooth scroll to expanded profile
-            if (avatar.classList.contains('expanded')) {
-                setTimeout(() => {
-                    this.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'center'
-                    });
-                }, 300);
-            }
+            // Show overlay and current card
+            overlay.classList.add('visible');
+            card.classList.add('visible');
         });
     });
     
-    // Close expanded profile when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.team-member')) {
-            teamMembers.forEach(member => {
-                const avatar = member.querySelector('.team-avatar');
-                const bio = member.querySelector('.team-bio');
-                const contact = member.querySelector('.team-contact');
-                const skills = member.querySelector('.team-skills');
-                
-                avatar.classList.remove('expanded');
-                bio.classList.remove('visible');
-                contact.classList.remove('visible');
-                skills.classList.remove('visible');
+    // Hide info card when mouse leaves team member
+    teamMembers.forEach(member => {
+        member.addEventListener('mouseleave', function(e) {
+            // Check if mouse is moving to the info card
+            const memberName = this.dataset.member;
+            const card = document.getElementById(memberName + '-card');
+            
+            setTimeout(() => {
+                if (!card.matches(':hover') && !this.matches(':hover')) {
+                    overlay.classList.remove('visible');
+                    card.classList.remove('visible');
+                }
+            }, 100);
+        });
+    });
+    
+    // Keep card open when hovering over it
+    allCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.classList.add('visible');
+            overlay.classList.add('visible');
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            overlay.classList.remove('visible');
+            this.classList.remove('visible');
+        });
+    });
+    
+    // Close buttons
+    document.querySelectorAll('.team-info-close').forEach(button => {
+        button.addEventListener('click', function() {
+            overlay.classList.remove('visible');
+            allCards.forEach(card => {
+                card.classList.remove('visible');
             });
-        }
+        });
+    });
+    
+    // Close on overlay click
+    overlay.addEventListener('click', function() {
+        overlay.classList.remove('visible');
+        allCards.forEach(card => {
+            card.classList.remove('visible');
+        });
+    });
+    
+    // Prevent card close when clicking inside the card
+    allCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
     });
 });
